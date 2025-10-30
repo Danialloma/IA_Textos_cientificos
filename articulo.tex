@@ -40,11 +40,11 @@ a01770442@tec.mx}
 Ciudad de México, México\\
 a01667100@tec.mx}
 \and
-\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockN{4\textsuperscript{th} Paulina Díaz Arroyo}
 \IEEEauthorblockA{\textit{Departamento de ingenieria y ciencias} \\
 \textit{Tecnológico de Monterrey}\\
 Ciudad de México, México \\
-email address or ORCID}
+a01029592@tec.mx}
 }
 
 \maketitle
@@ -59,9 +59,16 @@ or Math in Paper Title or Abstract.
 component, formatting, style, styling, insert
 \end{IEEEkeywords}
 
-\section{Introduction}
-This document is a model and instructions for \LaTeX.
-Please observe the conference page limits. 
+\section{Introducción}
+La tecnología blockchain ha redefinido la confianza digital, pero su sostenibilidad 
+depende directamente de la robustez de la criptografía que la soporta. Esta seguridad 
+se ve doblemente amenazada: por un lado, por el riesgo futuro de la computación 
+cuántica, y por otro, por las vulnerabilidades de privacidad actuales. Como respuesta, 
+surgen dos frentes: la criptografía post-cuántica para asegurar la infraestructura a 
+largo plazo, y las Pruebas de Conocimiento Cero (ZKP) como solución para la 
+autenticación privada. Este trabajo explora cómo la sinergia entre blockchain y ZKP 
+busca mitigar las vulnerabilidades críticas de autenticación y acceso que hoy afectan 
+a la web y la nube.
 
 \section{Blockchain}
 
@@ -83,17 +90,17 @@ la resolución del problema matemático que implementa técnicas criptografícas
 
 \section{Criptografía}
 El panorama de la ciberseguridad se encuentra en una transformación inminente debido al avance de la computación cuántica, que amenaza con quebrar los criptosistemas de clave pública actuales como RSA y la Curva Elíptica (ECDSA) mediante el algoritmo de Shor (Fernandez-Carames & Fraga-Lamas, 2020). 
-\\
 La migración hacia estos nuevos paradigmas postcuánticos, sentara las bases de investigación posterior para busqueda de mejora algorimos de cifrado.
 La exploración de nuevas bases de seguridad se extiende a esquemas que han demostrado ser prometedores en términos de rendimiento, aunque aún enfrentan retos de estandarización y tamaño, como es el caso de los Sistemas Criptográficos Basados en Redes (Lattice) y los Esquemas de Firma Basados en Hash, algoritmos como Kyber, Dilithium y FALCON (seleccionados por NIST en 2024 para la estandarización) han mostrado velocidades de ejecución cercanas a los esquemas pre-cuánticos, un avance significativo respecto a otros enfoques (Fernandez-Carames & Fraga-Lamas, 2020). Por otro lado, los esquemas basados en hash, aunque de probada seguridad a largo plazo, generan firmas de gran tamaño, llegando a exceder los 40 KB, lo que los hace poco prácticos para estructuras de bloques masivas (Fernandez-Carames & Fraga-Lamas, 2020). La investigación actual, se centra en reducir la complejidad computacional y el tamaño de las estructuras de clave y firma en algoritmos, buscando el equilibrio ideal entre seguridad y eficiencia. Esta intensa labor busca aumentar la complejidad de los sistemas de cifrado y reducción de tamaño de las firmas actuales, así como sentar las bases para el desarrollo, en particular, para el despliegue generalizado de las pruebas de conocimiento cero.
 
-\section{Vulnerabilidades en web y nube}
-El uso de Pruebas de Conocimiento Cero  surge ante la necesidad de autenticar usuarios y verificar transacciones sin revelar información sensible (Zhang et al., 2024; Berrios Moya et al., 2025). Estas tecnologías buscan resolver fallos de autenticación y control de acceso que comprometen la seguridad en aplicaciones web y herramientas en la nube, como los identificados por OWASP top 10 (Fredj et al., 2021).
-En la nube, la Gestión de Identidad y Acceso (IAM) sigue siendo una fuente crítica de vulnerabilidades por errores en las configuraciones (Tabrizchi & Rafsanjani, 2020). Los atacantes aprovechan estas fallas mediante técnicas como DDoS o escalamiento de privilegios (Berrios Moya et al., 2025). La mitigación requiere un enfoque integral que combine la seguridad a nivel de aplicación (validación contra SQL Injection y XSS) con modelos criptográficos avanzados.
-Las arquitecturas emergentes proponen blockchain y ZKP para descentralizar la confianza: los contratos inteligentes gestionan la lógica de acceso y las pruebas criptográficas permiten verificar credenciales sin exponer datos (Zhang et al., 2024; Berrios Moya et al., 2025).
-Aun con tecnologías ZKP y blockchain, las amenazas como la manipulación o el fallo en control de acceso persisten (Berrios Moya et al., 2025). OWASP las clasifica entre las vulnerabilidades más críticas (Fredj et al., 2021). En la nube, los errores de IAM aumentan el riesgo (Tabrizchi & Rafsanjani, 2020), mientras que en blockchain surgen vulnerabilidades en smart contracts (Zhang et al., 2024). Esto evidencia que la lógica de autorización sigue siendo el eslabón débil, y que las ZKP pueden reforzarla mediante verificación criptográfica sin exposición de datos.
-La autenticación y el control de acceso continúan siendo los principales vectores de riesgo en web y nube. Las Pruebas de Conocimiento Cero y el blockchain surgen como estrategias prometedoras para reducir estos riesgos, fortaleciendo la privacidad y la autorización (Berrios Moya et al., 2025; Zhang et al., 2024). Sin embargo, la evidencia actual se basa en modelos teóricos más que experimentales, lo que plantea la necesidad de evaluar cómo los escáneres de vulnerabilidades tradicionales enfrentan los nuevos escenarios de seguridad (Fredj et al., 2021).
+\section{Pruebas de conocimiento cero}
+En el contexto actual de ciberseguridad, las pruebas de conocimiento cero se han posicionado como una herramienta esencial en el fortalecimiento de la autenticación y el control de acceso en entornos digitales sin comprometer la privacidad de los usuarios.Este enfoque es comparable a decir que conoces un secreto sin tener que contarlo, ya que permite demostrar que se posee cierta información sin necesidad de exponerla, algo esencial en aplicaciones web, servicios en la nube y entornos blockchain.Un sistema de pruebas de conocimiento cero (ZKP) se sustenta en tres propiedades fundamentales: el principio de conocimiento cero, que impide revelar información adicional; la solidez, que asegura que no se pueda engañar al verificador si el demostrador no tiene la información correcta; y la completitud, que garantiza que, si el demostrador conoce la información, siempre podrá ser verificada exitosamente, sin importar el número de repeticiones (I. Ongay Valverde, comunicación personal, 7 de octubre de 2025).Las pruebas de conocimiento cero también aportan beneficios clave en entornos blockchain, ya que facilitan transacciones financieras sin revelar montos, permiten autenticar identidades sin exponer datos personales y ejecutan contratos inteligentes sin comprometer información sensible. Su eficacia, sin embargo, no depende únicamente del concepto teórico, investigaciones recientes han demostrado que la seguridad de estos protocolos varía según parámetros técnicos como la longitud de las claves utilizadas y el número de interacciones entre las partes involucradas ( Moya et al., 2023).Esto se refleja en esquemas concretos como los logaritmos discretos, los caminos hamiltonianos o el protocolo del túnel, donde la seguridad radica en la imposibilidad de obtener la información original sin el conocimiento adecuado.(I. Ongay Valverde, comunicación personal, 7 de octubre de 2025).En conjunto, estos mecanismos refuerzan la privacidad y la integridad en entornos digitales, orientándolos hacia sistemas más confiables, descentralizados y resistentes a ataques.
 
+\section{Vulnerabilidades en web y nube}
+El uso de Pruebas de Conocimiento Cero  surge ante la necesidad de autenticar usuarios y verificar transacciones sin revelar información sensible (Zhang et al., 2024; Berrios Moya et al., 2025). Estas tecnologías buscan resolver fallos de autenticación y control de acceso que comprometen la seguridad en aplicaciones web y herramientas en la nube, como los identificados por OWASP top 10 (Fredj et al., 2021). En la nube, la Gestión de Identidad y Acceso (IAM) sigue siendo una fuente crítica de vulnerabilidades por errores en las configuraciones (Tabrizchi & Rafsanjani, 2020). Los atacantes aprovechan estas fallas mediante técnicas como DDoS o escalamiento de privilegios (Berrios Moya et al., 2025). La mitigación requiere un enfoque integral que combine la seguridad a nivel de aplicación (validación contra SQL Injection y XSS) con modelos criptográficos avanzados. Las arquitecturas emergentes proponen blockchain y ZKP para aumentar la confianza del usuario, los contratos inteligentes gestionan la lógica de acceso y las pruebas criptográficas permiten verificar credenciales sin exponer datos (Zhang et al., 2024; Berrios Moya et al., 2025).
+
+
+Aun con tecnologías ZKP y blockchain, las amenazas como la manipulación o el fallo en control de acceso persisten (Berrios Moya et al., 2025). En la nube, los errores de IAM aumentan el riesgo (Tabrizchi y Rafsanjani, 2020), mientras que en blockchain surgen vulnerabilidades en smart contracts (Zhang et al., 2024). Esto evidencia que la lógica de autorización sigue siendo el eslabón débil, y que las ZKP pueden reforzarla mediante verificación criptográfica sin exposición de datos. La autenticación y el control de acceso continúan siendo los principales vectores de riesgo en web y nube. Las Pruebas de Conocimiento Cero y el Blockchain surgen como estrategias prometedoras para reducir estos riesgos, fortaleciendo la privacidad y la autorización (Berrios Moya et al., 2025; Zhang et al., 2024). Sin embargo, la evidencia actual se basa en modelos teóricos más que experimentales, lo que plantea la necesidad de evaluar cómo los escáneres de vulnerabilidades tradicionales enfrentan los nuevos escenarios de seguridad (Fredj et al., 2021).
 
 
 \section*{Referencias}
@@ -119,6 +126,8 @@ La autenticación y el control de acceso continúan siendo los principales vecto
     \href{https://doi.org/10.3390/electronics13214260}{A Blockchain and Zero Knowledge Proof Based Data Security Transaction Method in Distributed Computing (Electronics, Zhang, B., et al., 2024)}
     \item 
     \href{https://doi.org/10.1109/access.2020.2968985}{Towards Post-Quantum Blockchain: A Review on Blockchain Cryptography Resistant to Quantum Computing Attacks (IEEE Access, Fernandez-Carames, T. M., \& Fraga-Lamas, P., 2020)}
+    \item 
+    \href{https://doi.org/10.3390/app13095552}{Implemen\-tation and Security Test of Zero\-Knowledge Proto\-cols on SSI Block\-chain (Applied Sciences, Moya, C. V., et al., 2023)}
 
 \end{itemize}
 \end{document}
