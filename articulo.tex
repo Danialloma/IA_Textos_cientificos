@@ -18,7 +18,7 @@
 \begin{document}
 
 \title{Ciberseguridad\\
-{\footnotesize \textsuperscript{}Criptografía, Blockchain, Pruebas de Conocimiento cero y Vulnerabilidades en web}
+{\footnotesize \textsuperscript{}Blockchain, Criptografía, Pruebas de Conocimiento cero y Vulnerabilidades en web}
 \thanks{}
 }
 
@@ -78,7 +78,12 @@ descentralización y seguridad, tiene un gran potencial para mejorar los servici
 Hoy el uso más comun es en el mundo de las criptomonedas como Bitcoin y sirve para tener de forma clara y permanente 
 todas las transacciones. En las criptomonedas cada una tiene un tipo diferente de mecanismo de 
 consenso como Proof of Work, Proof of Stake, Ouroboros, etc. Estos involucran a los mineros, 
-la resolución del problema matemático que implementa técnicas de criptografía que usan Hashes.
+la resolución del problema matemático que implementa técnicas criptografícas basadas en funciones hash.
+
+
+\section{Criptografía}
+El panorama de la ciberseguridad se encuentra en una transformación inminente debido al avance de la computación cuántica, que amenaza con quebrar los criptosistemas de clave pública actuales como RSA y la Curva Elíptica (ECDSA) mediante el algoritmo de Shor (Fernandez-Carames & Fraga-Lamas, 2020). La migración hacia estos nuevos paradigmas postcuánticos, sentara las bases de investigación posterior para busqueda de mejora algorimos de cifrado.
+La exploración de nuevas bases de seguridad se extiende a esquemas que han demostrado ser prometedores en términos de rendimiento, aunque aún enfrentan retos de estandarización y tamaño, como es el caso de los Sistemas Criptográficos Basados en Redes (Lattice) y los Esquemas de Firma Basados en Hash, algoritmos como Kyber, Dilithium y FALCON (seleccionados por NIST en 2024 para la estandarización) han mostrado velocidades de ejecución cercanas a los esquemas pre-cuánticos, un avance significativo respecto a otros enfoques (Fernandez-Carames & Fraga-Lamas, 2020). Por otro lado, los esquemas basados en hash, aunque de probada seguridad a largo plazo, generan firmas de gran tamaño, llegando a exceder los 40 KB, lo que los hace poco prácticos para estructuras de bloques masivas (Fernandez-Carames & Fraga-Lamas, 2020). La investigación actual, se centra en reducir la complejidad computacional y el tamaño de las estructuras de clave y firma en algoritmos, buscando el equilibrio ideal entre seguridad y eficiencia. Esta intensa labor busca aumentar la complejidad de los sistemas de cifrado y reducción de tamaño de las firmas actuales, así como sentar las bases para el desarrollo, en particular, para el despliegue generalizado de las pruebas de conocimiento cero.
 
 \section{Vulnerabilidades en web y nube}
 El uso de Pruebas de Conocimiento Cero  surge ante la necesidad de autenticar usuarios y verificar transacciones sin revelar información sensible (Zhang et al., 2024; Berrios Moya et al., 2025). Estas tecnologías buscan resolver fallos de autenticación y control de acceso que comprometen la seguridad en aplicaciones web y herramientas en la nube, como los identificados por OWASP top 10 (Fredj et al., 2021).
@@ -88,9 +93,11 @@ Aun con tecnologías ZKP y blockchain, las amenazas como la manipulación o el f
 La autenticación y el control de acceso continúan siendo los principales vectores de riesgo en web y nube. Las Pruebas de Conocimiento Cero y el blockchain surgen como estrategias prometedoras para reducir estos riesgos, fortaleciendo la privacidad y la autorización (Berrios Moya et al., 2025; Zhang et al., 2024). Sin embargo, la evidencia actual se basa en modelos teóricos más que experimentales, lo que plantea la necesidad de evaluar cómo los escáneres de vulnerabilidades tradicionales enfrentan los nuevos escenarios de seguridad (Fredj et al., 2021).
 
 
+
 \section*{Referencias}
 
 \begin{itemize}
+
     \item 
     \href{https://doi.org/10.1016/j.jii.2019.04.002}{The blockchain: State-of-the-art and research challenges (Journal Of Industrial Information Integration, Lu, Y., 2019)}
 
@@ -108,6 +115,8 @@ La autenticación y el control de acceso continúan siendo los principales vecto
 
     \item 
     \href{https://doi.org/10.3390/electronics13214260}{A Blockchain and Zero Knowledge Proof Based Data Security Transaction Method in Distributed Computing (Electronics, Zhang, B., et al., 2024)}
-\end{itemize}
+    \item 
+    \href{https://doi.org/10.1109/access.2020.2968985}{Towards Post-Quantum Blockchain: A Review on Blockchain Cryptography Resistant to Quantum Computing Attacks (IEEE Access, Fernandez-Carames, T. M., \& Fraga-Lamas, P., 2020)}
 
+\end{itemize}
 \end{document}
